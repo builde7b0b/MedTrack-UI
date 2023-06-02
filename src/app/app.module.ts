@@ -29,6 +29,9 @@ import { Router, RouterModule } from '@angular/router';
 import { RolesComponent } from './roles/roles.component';
 import {MatListModule} from '@angular/material/list';
 
+import {Sort, MatSortModule} from '@angular/material/sort';
+import {NgFor} from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +65,8 @@ import {MatListModule} from '@angular/material/list';
     MenuComponent,
    MatGridListModule,
    MatTabsModule,
+   MatSortModule,
+   NgFor,
     
     
   ],

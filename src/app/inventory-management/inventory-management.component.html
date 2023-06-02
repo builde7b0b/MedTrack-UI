@@ -12,7 +12,17 @@
       <p>
         Options selected: {{shoes.selectedOptions.selected.length}}
       </p> </mat-tab>
-    <mat-tab label="Alert Settings"> Content 2 </mat-tab>
+    <mat-tab label="Alert Settings">
+        <mat-selection-list #alerts>
+        <mat-list-option *ngFor="let alerts of alertSettings">
+            {{alerts}}
+          </mat-list-option>
+        </mat-selection-list>
+        
+        <p>
+          Options selected: {{shoes.selectedOptions.selected.length}}
+        </p> 
+         </mat-tab>
     <mat-tab label="Low Stock Inventory"> Content 3 </mat-tab>
   </mat-tab-group>
 
