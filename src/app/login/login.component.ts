@@ -8,4 +8,11 @@ import { MenuComponent } from '../menu/menu.component';
 })
 export class LoginComponent {
 
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
+
 }
