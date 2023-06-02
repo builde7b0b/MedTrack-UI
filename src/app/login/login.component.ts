@@ -12,7 +12,7 @@ import {MatStepperModule} from '@angular/material/stepper';
   styleUrls: ['./login.component.css']
 })
 
-@NgModule()
+
 export class LoginComponent {
 
   
