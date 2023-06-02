@@ -1,0 +1,97 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+    animation: scaleIn 1s ease-in-out;
+
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto; 
+    margin-right: 16px;
+}
+
+
+.menu-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative; /* Ensure proper positioning context */
+    z-index: 10;
+    
+}
+
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.custom-toolbar {
+    background-color: var(--custom-primary); /* Update with your desired color */
+  }
+
+
+  .custom-button {
+    color: var(--custom-primary); /* Update with your desired color */
+  }
