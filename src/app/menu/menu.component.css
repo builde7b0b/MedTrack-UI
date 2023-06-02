@@ -6,3 +6,8 @@ button{
     color:white;
     
 }
+a.router-link {
+    cursor: pointer;
+    /* Add any additional styles as needed */
+  }
+  

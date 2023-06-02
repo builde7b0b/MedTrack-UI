@@ -23,6 +23,8 @@ import { LoginComponent } from './login/login.component';
 import {MatInput, MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { Router, RouterModule } from '@angular/router';
+import { RolesComponent } from './roles/roles.component';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    RolesComponent,
     
   ],
   imports: [
@@ -51,7 +54,12 @@ import { RegisterComponent } from './register/register.component';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule,
+    MenuComponent,
+    
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
