@@ -1,23 +1,23 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">Pharmacy</button>
+<button class="white" mat-button [matMenuTriggerFor]="aboveMenu">Pharmacy</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
   <button mat-menu-item>Inventory</button>
   <button mat-menu-item>Orders</button>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="belowMenu">Customer</button>
+<button class="white" mat-button [matMenuTriggerFor]="belowMenu">Customer</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
   <button mat-menu-item>View Prescriptions</button>
   <button mat-menu-item>Request Refills</button>
 </mat-menu>
 
-<button mat-button [matMenuTriggerFor]="beforeMenu">Supplier</button>
+<button class="white" mat-button [matMenuTriggerFor]="beforeMenu">Supplier</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
   <button mat-menu-item>Check Low Stock Alerts</button>
   <button mat-menu-item>Item 2</button>
 </mat-menu>
 
 
-<button mat-button [matMenuTriggerFor]="afterMenu">API</button>
+<button class="white" mat-button [matMenuTriggerFor]="afterMenu">API</button>
 <mat-menu #afterMenu="matMenu" xPosition="after">
   <button mat-menu-item>Documentation</button>
   <button mat-menu-item>Purchase More Credits</button>

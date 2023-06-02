@@ -90,3 +90,8 @@ mat-toolbar {
 .custom-toolbar {
     background-color: var(--custom-primary); /* Update with your desired color */
   }
+
+
+  .custom-button {
+    color: var(--custom-primary); /* Update with your desired color */
+  }
