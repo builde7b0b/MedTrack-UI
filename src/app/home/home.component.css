@@ -5,12 +5,13 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
+    color: white;
 
 }
 
 h1 {
     font-size: 3rem;
-    color: #eb0000;
+    color: white;
     margin-bottom: 1rem;
     animation: scaleIn 1s ease-in-out;
 
@@ -18,7 +19,7 @@ h1 {
 
 p {
     font-size: 1.5rem;
-    color: #ff0000;
+    color: white;
     animation: fadeIn 1s ease-in-out;
 
 }
@@ -62,6 +63,8 @@ p {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    position: relative; /* Ensure proper positioning context */
+    z-index: 10;
     
 }
 
@@ -83,3 +86,7 @@ mat-toolbar {
     opacity: 0.5;
     z-index: 1;
 }
+
+.custom-toolbar {
+    background-color: var(--custom-primary); /* Update with your desired color */
+  }
