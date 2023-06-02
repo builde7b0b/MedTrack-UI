@@ -14,7 +14,7 @@
   <app-roles></app-roles>
   <mat-tab-group backgroundColor="primary">
     <mat-tab label="Inventory"> <mat-selection-list #shoes>
-        <mat-list-option class="white-text" color="accent" *ngFor="let shoe of typesOfShoes">
+        <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let shoe of typesOfShoes">
           {{shoe}}
         </mat-list-option>
       </mat-selection-list>
@@ -24,7 +24,7 @@
       </p> </mat-tab>
     <mat-tab label="Alert Settings">
         <mat-selection-list #alerts>
-        <mat-list-option *ngFor="let alerts of alertSettings">
+        <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">
             {{alerts}}
           </mat-list-option>
         </mat-selection-list>
@@ -35,7 +35,7 @@
          </mat-tab>
     <mat-tab label="Low Stock Inventory"> 
 
-        <table matSort (matSortChange)="sortData($event)">
+        <table class="transparent-bg" matSort (matSortChange)="sortData($event)">
             <tr>
               <th mat-sort-header="name">Medicine (Rx)</th>
               <th mat-sort-header="calories">Quantity</th>
