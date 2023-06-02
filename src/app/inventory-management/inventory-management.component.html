@@ -23,12 +23,34 @@
           Options selected: {{shoes.selectedOptions.selected.length}}
         </p> 
          </mat-tab>
-    <mat-tab label="Low Stock Inventory"> Content 3 </mat-tab>
+    <mat-tab label="Low Stock Inventory"> 
+
+        <table matSort (matSortChange)="sortData($event)">
+            <tr>
+              <th mat-sort-header="name">Medicine (Rx)</th>
+              <th mat-sort-header="calories">Quantity</th>
+              <th mat-sort-header="fat">Exp Date</th>
+             
+              
+            </tr>
+          
+            <tr *ngFor="let dessert of sortedData">
+              <td>{{dessert.name}}</td>
+              <td>{{dessert.calories}}</td>
+              <td>{{dessert.fat}}</td>
+              
+            </tr>
+          </table>
+        
+    </mat-tab>
   </mat-tab-group>
 
 <mat-grid-list cols="2"  rowHeight="1:1">
     <mat-grid-tile colspan="1">1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>
+        
+            
+    </mat-grid-tile>
     
   </mat-grid-list>
 
