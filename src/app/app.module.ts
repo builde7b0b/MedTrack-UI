@@ -8,6 +8,7 @@ import {MatChipsModule} from '@angular/material/chips';
 
 import {MatIconModule } from '@angular/material/icon'
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -41,6 +42,7 @@ import { LoginComponent } from './login/login.component';
    MatChipsModule,
     MatIconModule,
     MatStepperModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
