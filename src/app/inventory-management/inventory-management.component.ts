@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./inventory-management.component.css']
 })
 export class InventoryManagementComponent {
+  typesOfShoes: String[] = ["Aspirin", "Tylenol", "albuterol", "RandomRx"];
+
 
 }

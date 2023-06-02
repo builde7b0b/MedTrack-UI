@@ -5,6 +5,7 @@ import {MatToolbarModule } from '@angular/material/toolbar'
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import {MatIconModule } from '@angular/material/icon'
 import {MatStepperModule} from '@angular/material/stepper';
@@ -25,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { Router, RouterModule } from '@angular/router';
 import { RolesComponent } from './roles/roles.component';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -53,9 +55,11 @@ import { RolesComponent } from './roles/roles.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatListModule,
     FormsModule,
     RouterModule,
     MenuComponent,
+   MatGridListModule,
     
     
   ],

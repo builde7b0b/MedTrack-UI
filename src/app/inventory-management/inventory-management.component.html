@@ -1,2 +1,19 @@
-<p>inventory-management works!</p>
-<app-roles></app-roles>
+<mat-toolbar>
+    <span>Inventory Management</span>
+  </mat-toolbar><app-roles></app-roles>
+
+<mat-grid-list cols="2"  rowHeight="1:1">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    
+  </mat-grid-list>
+
+  <mat-selection-list #shoes>
+  <mat-list-option *ngFor="let shoe of typesOfShoes">
+    {{shoe}}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Options selected: {{shoes.selectedOptions.selected.length}}
+</p>
