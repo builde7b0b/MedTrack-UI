@@ -1,4 +1,7 @@
+<!-- Nav Menu -->
 <app-menu></app-menu>
+
+
 
 <!-- THIS IS ACTUALLY THE REGISTER COMPONENT
 Create a new register component and place this stepper code there for user's to register a new pharmacy.
@@ -46,12 +49,16 @@ How can we customize our stepper to be a login comp? -->
 </mat-stepper>
 
 
-<mat-form-field>
-    <mat-label>username</mat-label>
-    <input matInput>
-</mat-form-field>
 
-<mat-form-field>
-    <mat-label>password</mat-label>
-    <input matInput>
-</mat-form-field>
+<!-- connect these to our login endpoints for our backend API -->
+<div>
+    <mat-form-field>
+        <mat-label>username</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>password</mat-label>
+        <input matInput>
+    </mat-form-field>
+</div>
