@@ -20,6 +20,8 @@ import { ReportsComponent } from './reports/reports.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
+import {MatInput, MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { LoginComponent } from './login/login.component';
     MatIconModule,
     MatStepperModule,
     MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
