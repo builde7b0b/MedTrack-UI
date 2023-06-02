@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class InventoryManagementComponent {
   typesOfShoes: String[] = ["Aspirin", "Tylenol", "albuterol", "RandomRx"];
 
+  alertSettings: String[] = ["Set Alerts to ASAP", "Set Alerts to 'once per day'", "set alerts to twice per day", "Turn Alerts OFF"];
+
 
 }
