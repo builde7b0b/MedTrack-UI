@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
 
 import {MatIconModule } from '@angular/material/icon'
+import {MatStepperModule} from '@angular/material/stepper';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +40,7 @@ import { LoginComponent } from './login/login.component';
     MenuComponent,
    MatChipsModule,
     MatIconModule,
+    MatStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
