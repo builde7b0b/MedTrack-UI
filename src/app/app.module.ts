@@ -6,6 +6,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import {MatIconModule } from '@angular/material/icon'
 import {MatStepperModule} from '@angular/material/stepper';
@@ -60,6 +61,7 @@ import {MatListModule} from '@angular/material/list';
     RouterModule,
     MenuComponent,
    MatGridListModule,
+   MatTabsModule,
     
     
   ],
