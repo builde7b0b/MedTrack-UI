@@ -1,5 +1,8 @@
 <app-menu></app-menu>
 
+<!-- THIS IS ACTUALLY THE REGISTER COMPONENT
+Create a new register component and place this stepper code there for user's to register a new pharmacy.
+How can we customize our stepper to be a login comp? -->
 
 <mat-stepper #stepper> 
 <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
@@ -10,7 +13,7 @@
             <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
         </mat-form-field>
         <div>
-            <p>Go to a different step to see the error state</p>
+            
             <button mat-button matStepperNext> Next </button>
         </div>
     </form>
@@ -26,7 +29,7 @@
                required>
       </mat-form-field>
       <div>
-        <p>Go to a different step to see the error state</p>
+        
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>
@@ -36,8 +39,14 @@
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Go To Login</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
 </mat-stepper>
+
+
+<mat-form-field>
+    <mat-label>username</mat-label>
+    <input matInput>
+</mat-form-field>
