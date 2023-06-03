@@ -13,14 +13,12 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InventoryManagementComponent } from './inventory-management/inventory-management.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 import {MatInput, MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -44,6 +42,8 @@ import {NgFor} from '@angular/common';
     RegisterComponent,
     RolesComponent,
     
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,7 @@ import {NgFor} from '@angular/common';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MenuComponent,
+    
    MatChipsModule,
     MatIconModule,
     MatStepperModule,
@@ -62,7 +62,7 @@ import {NgFor} from '@angular/common';
     MatListModule,
     FormsModule,
     RouterModule,
-    MenuComponent,
+    
    MatGridListModule,
    MatTabsModule,
    MatSortModule,
