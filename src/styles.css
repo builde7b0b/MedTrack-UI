@@ -6,6 +6,7 @@
     --custom-primary: #6ab04c; /* Update with your desired color */
     --custom-accent: #00a79d; /* Update with your desired color */
 
-    background-color: #004d7a;
+    background-color: rgba(0, 77, 122, 0.9); /* Adjust the alpha value (0.9) for desired opacity */
+  background-blend-mode: darken;
   }
   

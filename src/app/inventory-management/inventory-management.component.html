@@ -1,1 +1,68 @@
-<p>inventory-management works!</p>
+
+  
+<app-menu></app-menu>
+<mat-toolbar color="primary">
+    <span>Inventory Management</span>
+    
+  </mat-toolbar>
+  <div class="background-video">
+    <video autoplay muted loop>
+      <source src="assets/pills_.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+  <app-roles></app-roles>
+  <mat-tab-group backgroundColor="primary">
+    <mat-tab label="Inventory"> <mat-selection-list #shoes>
+        <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let shoe of typesOfShoes">
+          {{shoe}}
+        </mat-list-option>
+      </mat-selection-list>
+      
+      <p class="white-text" color="white">
+        Options selected: {{shoes.selectedOptions.selected.length}}
+      </p> </mat-tab>
+    <mat-tab label="Alert Settings">
+        <mat-selection-list #alerts>
+        <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">
+            {{alerts}}
+          </mat-list-option>
+        </mat-selection-list>
+        
+        <p class="white-text">
+          Options selected: {{shoes.selectedOptions.selected.length}}
+        </p> 
+         </mat-tab>
+    <mat-tab label="Low Stock Inventory"> 
+
+        <table class="transparent-bg" matSort (matSortChange)="sortData($event)">
+            <tr>
+              <th mat-sort-header="name">Medicine (Rx)</th>
+              <th mat-sort-header="calories">Quantity</th>
+              <th mat-sort-header="fat">Exp Date</th>
+             
+              
+            </tr>
+          
+            <tr *ngFor="let dessert of sortedData">
+              <td>{{dessert.name}}</td>
+              <td>{{dessert.calories}}</td>
+              <td>{{dessert.fat}}</td>
+              
+            </tr>
+          </table>
+        
+    </mat-tab>
+  </mat-tab-group>
+
+<mat-grid-list cols="2"  rowHeight="1:1">
+    <mat-grid-tile colspan="1">1</mat-grid-tile>
+    <mat-grid-tile>
+        
+            
+    </mat-grid-tile>
+    
+  </mat-grid-list>
+  </div>
+
+  

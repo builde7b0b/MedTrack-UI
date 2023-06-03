@@ -1,0 +1,64 @@
+<!-- Nav Menu -->
+<app-menu></app-menu>
+
+
+
+<!-- THIS IS ACTUALLY THE REGISTER COMPONENT
+Create a new register component and place this stepper code there for user's to register a new pharmacy.
+How can we customize our stepper to be a login comp? -->
+
+<mat-stepper #stepper> 
+<mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+    <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+            
+            <button mat-button matStepperNext> Next </button>
+        </div>
+    </form>
+
+</mat-step>
+
+<mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+               required>
+      </mat-form-field>
+      <div>
+        
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Go To Login</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+
+
+<!-- connect these to our login endpoints for our backend API -->
+<div>
+    <mat-form-field>
+        <mat-label>username</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>password</mat-label>
+        <input matInput>
+    </mat-form-field>
+</div>
