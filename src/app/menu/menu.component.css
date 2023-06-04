@@ -3,9 +3,14 @@ button{
 }
 
 .white{
-    color:white;
+    color:rgb(0, 0, 0);
     
 }
+
+span{
+    color: black;
+}
+
 a.router-link {
     cursor: pointer;
     /* Add any additional styles as needed */

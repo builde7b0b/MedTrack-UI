@@ -1,6 +1,7 @@
 <mat-chip-listbox aria-label="Role Selection">
-    <mat-chip-option>Technician</mat-chip-option>
-    <mat-chip-option>Pharmacist</mat-chip-option>
-    <mat-chip-option color="accent" selected>Purchaser</mat-chip-option>
-    <mat-chip-option color="warn">Manager</mat-chip-option>
- </mat-chip-listbox>
+    <mat-chip-option (click)="selectRole('Technician')">Technician</mat-chip-option>
+    <mat-chip-option (click)="selectRole('Pharmacist')"  queryParamsHandling="merge">Pharmacist</mat-chip-option>
+    <mat-chip-option (click)="selectRole('Purchaser')"  color="accent" queryParamsHandling="merge">Purchaser</mat-chip-option>
+    <mat-chip-option (click)="selectRole('Manager')"  color="warn" queryParamsHandling="merge">Manager</mat-chip-option>
+  </mat-chip-listbox>
+  

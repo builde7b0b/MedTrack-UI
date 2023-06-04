@@ -7,13 +7,22 @@ import { MenuComponent } from './menu/menu.component';
 import { RolesComponent } from './roles/roles.component';
 import { ReportsComponent } from './reports/reports.component';
 import { InventoryManagementComponent } from './inventory-management/inventory-management.component';
+import { TechnicianComponent } from './technician/technician.component';
+import { PharmacistComponent } from './pharmacist/pharmacist.component';
+import { PurchaserComponent } from './purchaser/purchaser.component';
+import { ManagerComponent } from './manager/manager.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'reports', component: ReportsComponent},
-  { path: 'dashboard', component: InventoryManagementComponent}
+  { path: 'dashboard', component: InventoryManagementComponent},
+  { path: 'technician', component: TechnicianComponent },
+  { path: 'pharmacist', component: PharmacistComponent },
+  { path: 'purchaser', component: PurchaserComponent },
+  { path: 'manager', component: ManagerComponent },
 
 ];
 

@@ -6,14 +6,16 @@
     
   </mat-toolbar>
   <div class="background-video">
-    <video autoplay muted loop>
+    <!-- <video autoplay muted loop>
       <source src="assets/pills_.mp4" type="video/mp4">
       Your browser does not support the video tag.
-    </video>
+    </video> -->
   
   <app-roles></app-roles>
+  <div *ngIf="userRole === 'Technician'">
   <mat-tab-group backgroundColor="primary">
-    <mat-tab label="Inventory"> <mat-selection-list #shoes>
+    <mat-tab label="Inventory"> 
+      <mat-selection-list #shoes>
         <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let shoe of typesOfShoes">
           {{shoe}}
         </mat-list-option>
@@ -54,6 +56,7 @@
         
     </mat-tab>
   </mat-tab-group>
+</div>
 
 <mat-grid-list cols="2"  rowHeight="1:1">
     <mat-grid-tile colspan="1">1</mat-grid-tile>

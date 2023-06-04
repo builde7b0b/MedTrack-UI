@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { RoleService } from '../roles/RoleService';
+
 
 export interface Dessert {
   calories: number;
@@ -17,6 +20,9 @@ export interface Dessert {
 })
 
 export class InventoryManagementComponent {
+
+  userRole: string = '';
+
   typesOfShoes: String[] = ["Aspirin", "Tylenol", "albuterol", "RandomRx"];
 
   alertSettings: String[] = ["Set Alerts to ASAP", "Set Alerts to 'once per day'", "set alerts to twice per day", "Turn Alerts OFF"];
@@ -32,7 +38,11 @@ export class InventoryManagementComponent {
   ];
   sortedData: Dessert[];
 
-  constructor() {
+  
+
+  constructor(private roleService: RoleService) {
+    this.userRole = 'Technician';
+    
     // Populating the data
     this.sortedData = [
       { name: 'Chocolate Cake', calories: 300, fat: 12, carbs: 40, protein: 4 },
@@ -41,6 +51,15 @@ export class InventoryManagementComponent {
       // Add more dessert objects as needed
     ];
   }
+
+  ngOnInit() {
+    this.roleService.role$.subscribe(role => {
+      this.userRole = role;
+      // Perform any necessary actions based on the userRole
+    });
+  }
+
+  
 
   sortData(sort: Sort) {
     const data = this.desserts.slice();

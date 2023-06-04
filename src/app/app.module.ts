@@ -29,6 +29,12 @@ import {MatListModule} from '@angular/material/list';
 
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
+import { MenuComponent } from './menu/menu.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TechnicianComponent } from './technician/technician.component';
+import { PharmacistComponent } from './pharmacist/pharmacist.component';
+import { PurchaserComponent } from './purchaser/purchaser.component';
+import { ManagerComponent } from './manager/manager.component';
 
 
 @NgModule({
@@ -41,6 +47,11 @@ import {NgFor} from '@angular/common';
     LoginComponent,
     RegisterComponent,
     RolesComponent,
+    MenuComponent,
+    TechnicianComponent,
+    PharmacistComponent,
+    PurchaserComponent,
+    ManagerComponent,
     
     
     
@@ -67,6 +78,8 @@ import {NgFor} from '@angular/common';
    MatTabsModule,
    MatSortModule,
    NgFor,
+   MatSnackBarModule,
+  
     
     
   ],

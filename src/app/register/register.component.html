@@ -6,7 +6,8 @@
 <!-- THIS IS ACTUALLY THE REGISTER COMPONENT
 Create a new register component and place this stepper code there for user's to register a new pharmacy.
 How can we customize our stepper to be a login comp? -->
-
+<div class="centered-container">
+  <h1>Register Pharmacy</h1>
 <mat-stepper #stepper> 
 <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
     <form [formGroup]="firstFormGroup">
@@ -47,4 +48,4 @@ How can we customize our stepper to be a login comp? -->
     </div>
   </mat-step>
 </mat-stepper>
-
+</div>

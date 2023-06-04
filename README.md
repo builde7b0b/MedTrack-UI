@@ -1,4 +1,43 @@
-# MedtrackFrontend
+# MedTrack-UI
+![](/src/assets/branded/5.png)
+
+# Description 
+The MedTrack UI is the user interface component of the MedTrack Pharmacy Inventory Management system. It provides a visually appealing and intuitive interface for users to interact with the system's features and functionalities. 
+
+With its user-friendly design, the 
+MedTrack UI ensures a seamless and efficient user experience, empowering pharmacies to effectively manage their inventory and streamline their operations.
+
+
+## Project Management
+### UI Design (Pre-Development)
+
+- Home Page
+![](/src/assets/branded/4.png)
+
+- Expired Medications
+![](/src/assets/branded/3.png)
+
+- Total Inventory 
+![](/src/assets/branded/2.png)
+
+- Low Stock Settings 
+![](/src/assets/branded/1.png)
+
+
+### Day 1-2
+
+- Home Page
+![](/src/assets/Day2/MedTrackHome.png)
+
+- Login Page
+![](/src/assets/Day2/login2.png)
+
+- Register Page
+![](/src/assets/Day2/Register.png)
+
+- Investory Page
+![](/src/assets/Day2/Inventory.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
