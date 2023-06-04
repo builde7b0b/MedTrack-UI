@@ -31,6 +31,7 @@ import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { MenuComponent } from './menu/menu.component';
    MatTabsModule,
    MatSortModule,
    NgFor,
+  
     
     
   ],
