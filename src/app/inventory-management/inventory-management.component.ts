@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { RoleService } from '../roles/RoleService';
+
 
 export interface Dessert {
   calories: number;
@@ -35,7 +38,9 @@ export class InventoryManagementComponent {
   ];
   sortedData: Dessert[];
 
-  constructor() {
+  
+
+  constructor(private roleService: RoleService) {
     this.userRole = 'Technician';
     
     // Populating the data
@@ -46,6 +51,15 @@ export class InventoryManagementComponent {
       // Add more dessert objects as needed
     ];
   }
+
+  ngOnInit() {
+    this.roleService.role$.subscribe(role => {
+      this.userRole = role;
+      // Perform any necessary actions based on the userRole
+    });
+  }
+
+  
 
   sortData(sort: Sort) {
     const data = this.desserts.slice();
