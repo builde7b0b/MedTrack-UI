@@ -17,6 +17,9 @@ export interface Dessert {
 })
 
 export class InventoryManagementComponent {
+
+  userRole: string = '';
+
   typesOfShoes: String[] = ["Aspirin", "Tylenol", "albuterol", "RandomRx"];
 
   alertSettings: String[] = ["Set Alerts to ASAP", "Set Alerts to 'once per day'", "set alerts to twice per day", "Turn Alerts OFF"];
@@ -33,6 +36,8 @@ export class InventoryManagementComponent {
   sortedData: Dessert[];
 
   constructor() {
+    this.userRole = 'Technician';
+    
     // Populating the data
     this.sortedData = [
       { name: 'Chocolate Cake', calories: 300, fat: 12, carbs: 40, protein: 4 },
