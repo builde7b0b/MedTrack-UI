@@ -1,1 +1,19 @@
-<a class="router-link" routerLink="login">Go to Login</a>
+
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon></mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button class="router-link" routerLink="/" mat-menu-item>
+        
+      <span>Go Home</span>
+    </button>
+    <button class="router-link" routerLink="/" mat-menu-item disabled>
+     
+      <span >API</span>
+    </button>
+    <button class="router-link" routerLink="/" mat-menu-item disabled>
+      
+      <span>Plans</span>
+    </button>
+  </mat-menu>
+  
