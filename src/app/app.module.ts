@@ -33,6 +33,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TechnicianComponent } from './technician/technician.component';
 import { PharmacistComponent } from './pharmacist/pharmacist.component';
+import { PurchaserComponent } from './purchaser/purchaser.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { PharmacistComponent } from './pharmacist/pharmacist.component';
     MenuComponent,
     TechnicianComponent,
     PharmacistComponent,
+    PurchaserComponent,
     
     
     
