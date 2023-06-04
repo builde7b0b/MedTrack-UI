@@ -34,6 +34,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TechnicianComponent } from './technician/technician.component';
 import { PharmacistComponent } from './pharmacist/pharmacist.component';
 import { PurchaserComponent } from './purchaser/purchaser.component';
+import { ManagerComponent } from './manager/manager.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { PurchaserComponent } from './purchaser/purchaser.component';
     TechnicianComponent,
     PharmacistComponent,
     PurchaserComponent,
+    ManagerComponent,
     
     
     
