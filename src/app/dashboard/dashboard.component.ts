@@ -8,7 +8,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(private router: Router, private snackBar: MatSnackBar) { }
 
 
 }
