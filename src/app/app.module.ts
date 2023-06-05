@@ -41,7 +41,7 @@ import { ManagerComponent } from './manager/manager.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDividerModule} from '@angular/material/divider';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -92,6 +92,7 @@ import {MatDividerModule} from '@angular/material/divider';
   MatTooltipModule,
   MatBadgeModule,
   MatDividerModule,
+  HttpClientModule,
     
     
   ],
