@@ -11,6 +11,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule } from '@angular/material/icon'
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTooltipModule, TooltipComponent} from '@angular/material/tooltip';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -58,6 +59,7 @@ import {MatRadioModule} from '@angular/material/radio';
     
     
     
+    
   ],
   imports: [
     BrowserModule,
@@ -85,6 +87,7 @@ import {MatRadioModule} from '@angular/material/radio';
    MatProgressSpinnerModule,
    MatTableModule,
   MatRadioModule,
+  MatTooltipModule
     
     
   ],
