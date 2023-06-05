@@ -2,11 +2,21 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+/* Global CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 :root {
     --custom-primary: #6ab04c; /* Update with your desired color */
     --custom-accent: #00a79d; /* Update with your desired color */
 
-    background-color: rgba(0, 77, 122, 0.9); /* Adjust the alpha value (0.9) for desired opacity */
+    background-color: #f5f5f5; /* Adjust the alpha value (0.9) for desired opacity */
   background-blend-mode: darken;
   }
   
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }

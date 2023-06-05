@@ -21,10 +21,16 @@
   
   .content {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
+  }
+
+  .logo-container{
+    color: black;
+    
   }
   
   h1 {
+    color:rgb(0, 0, 0);
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -42,7 +48,7 @@
     border-radius: 30px;
     background-color: transparent;
     border: 2px solid white;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
   }
   
@@ -51,4 +57,17 @@
     border-color: white;
     color: black;
   }
+
+  .custom-toolbar {
+    opacity: 0.8;
+    border-radius: 8px;
+    border: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2); /* Transparent white border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+  }
+  
+  
   
