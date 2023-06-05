@@ -1,11 +1,16 @@
 
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">MENU
-    <mat-icon></mat-icon>
+<button mat-icon-button routerLink="/"   aria-label="Example icon-button with a menu">
+  <mat-icon>home</mat-icon>
+    
   </button>
+  <button mat-icon-button [matMenuTriggerFor]="menu"  aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+      
+    </button>
   <mat-menu #menu="matMenu">
-    <button class="router-link" routerLink="/" mat-menu-item>
+    <button class="router-link" routerLink="/register" mat-menu-item>
         
-      <span>Go Home</span>
+      <span>Register</span>
     </button>
     <button class="router-link" routerLink="/" mat-menu-item disabled>
      
