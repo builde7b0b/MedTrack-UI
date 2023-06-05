@@ -37,6 +37,7 @@ import { PharmacistComponent } from './pharmacist/pharmacist.component';
 import { PurchaserComponent } from './purchaser/purchaser.component';
 import { ManagerComponent } from './manager/manager.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -83,7 +84,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
    MatSnackBarModule,
    MatProgressSpinnerModule,
    MatTableModule,
-  
+  MatRadioModule,
     
     
   ],
