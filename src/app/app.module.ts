@@ -26,6 +26,7 @@ import { RegisterComponent } from './register/register.component';
 import { Router, RouterModule } from '@angular/router';
 import { RolesComponent } from './roles/roles.component';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
 
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
@@ -35,6 +36,7 @@ import { TechnicianComponent } from './technician/technician.component';
 import { PharmacistComponent } from './pharmacist/pharmacist.component';
 import { PurchaserComponent } from './purchaser/purchaser.component';
 import { ManagerComponent } from './manager/manager.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -79,6 +81,8 @@ import { ManagerComponent } from './manager/manager.component';
    MatSortModule,
    NgFor,
    MatSnackBarModule,
+   MatProgressSpinnerModule,
+   MatTableModule,
   
     
     
