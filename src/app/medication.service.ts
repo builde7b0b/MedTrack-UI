@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
+export interface Medication {
+  medication
+}
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +16,8 @@ export class MedicationService {
 
   constructor(private http: HttpClient) { }
 
-  createMedication(){
+  createMedication(medication: Medication): Observable<any> {
+    return this.http.post<any>(`{this.baseUrl}`, medication);
 
   }
 
