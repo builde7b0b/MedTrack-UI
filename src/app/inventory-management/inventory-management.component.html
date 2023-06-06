@@ -16,9 +16,14 @@
   <div *ngIf="userRole === 'Technician'">
   <mat-tab-group backgroundColor="primary">
     <mat-tab label="Inventory"> 
-      <mat-selection-list #shoes>
+      <!-- <mat-selection-list #shoes>
         <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let shoe of typesOfShoes">
           {{shoe}}
+        </mat-list-option>
+      </mat-selection-list> -->
+      <mat-selection-list #shoes>
+        <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let medication of medications">
+          {{ medication.name }}
         </mat-list-option>
       </mat-selection-list>
       

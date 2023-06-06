@@ -52,12 +52,7 @@ export class InventoryManagementComponent {
 
   
 createMedication() {
-  const newMedication: Medication = {
-    medicationId: null, // Set it to null temporarily
-    name: '',
-    quantity: 0,
-    expirationDate: new Date // Set the desired expiration date
-  };
+  
   
   const observer: Observer<any> = {
     next: (value: any) => {
@@ -72,8 +67,9 @@ createMedication() {
     }
   };
   
-  this.medicationService.createMedication(newMedication).subscribe(observer)
+  this.medicationService.createMedication(this.newMedication).subscribe(observer)
   console.log(observer)
+  this.medications.push(this.newMedication)
 }
 
 
@@ -94,19 +90,21 @@ createMedication() {
       this.userRole = role;
       // Perform any necessary actions based on the userRole
     });
+    this.fetchMedications();
   }
 
   fetchMedications(): void {
-    this.medicationService.getMedications().subscribe(
-      (response: Medication[]) => {
+    this.medicationService.getAllMedications().subscribe(
+      (response: any) => {
+        // Handle the response and assign it to your medication array
         this.medications = response;
-        this.fetchMedicationDetails();
       },
       (error: any) => {
-        console.error('Error fetching medications:', error);
+        // Handle the error
       }
     );
   }
+
 
   
 

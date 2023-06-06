@@ -35,8 +35,8 @@ export class MedicationService {
     );
   }
 
-  getMedications(){
-    return this.http.get(`${this.baseUrl}`).pipe(
+  getAllMedications(){
+    return this.http.get(`${this.baseUrl}/`).pipe(
       tap(response => {
         console.log(response);
         // Handle the response and display the medication
