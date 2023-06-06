@@ -96,6 +96,18 @@ createMedication() {
     });
   }
 
+  fetchMedications(): void {
+    this.medicationService.getMedications().subscribe(
+      (response: Medication[]) => {
+        this.medications = response;
+        this.fetchMedicationDetails();
+      },
+      (error: any) => {
+        console.error('Error fetching medications:', error);
+      }
+    );
+  }
+
   
 
   sortData(sort: Sort) {

@@ -32,7 +32,19 @@ export class MedicationService {
       // Handle the response and display the medication
       console.log('Medication:', response);
     })
-  );
-}
+    );
+  }
+
+  getMedications(){
+    return this.http.get(`${this.baseUrl}`).pipe(
+      tap(response => {
+        console.log(response);
+        // Handle the response and display the medication
+        
+      })
+      );
+  }
+
+
 
 }
