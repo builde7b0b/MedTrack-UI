@@ -22,11 +22,35 @@
         </mat-list-option>
       </mat-selection-list>
       
-      <p class="white-text" color="white">
+      <p class="white-text" color="white"></p>
         Options selected: {{shoes.selectedOptions.selected.length}}
         <button (click)="createMedication()">Create Medication</button>
+        <h1>Create Medication</h1>
+        <div>
+          <mat-form-field>
+            <mat-label>Medication Name</mat-label>
+            <input matInput [(ngModel)]="newMedication.name" name="name" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input matInput type="number" [(ngModel)]="newMedication.quantity" name="quantity" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Expiration Date</mat-label>
+            <input matInput type="date" [(ngModel)]="newMedication.expirationDate" name="expirationDate" required>
+          </mat-form-field>
+        </div>
 
-      </p> </mat-tab>
+        <button mat-raised-button color="primary" (click)="createMedication()">Create Medication</button>
+
+
+
+
+       </mat-tab>
     <mat-tab label="Alert Settings">
         <mat-selection-list #alerts>
         <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">

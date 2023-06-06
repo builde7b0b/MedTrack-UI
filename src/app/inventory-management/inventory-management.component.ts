@@ -24,6 +24,13 @@ export interface Dessert {
 
 export class InventoryManagementComponent {
 
+  newMedication: Medication = {
+    medicationId: null,
+    name: '',
+    quantity: 0,
+    expirationDate: new Date
+  };
+
   userRole: string = '';
 
   typesOfShoes: String[] = ["Aspirin", "Tylenol", "albuterol", "RandomRx"];
@@ -45,9 +52,9 @@ export class InventoryManagementComponent {
 createMedication() {
   const newMedication: Medication = {
     medicationId: null, // Set it to null temporarily
-    name: "zspirin",
-    quantity: 10,
-    expirationDate: new Date("2023-06-01") // Set the desired expiration date
+    name: '',
+    quantity: 0,
+    expirationDate: new Date // Set the desired expiration date
   };
   
   const observer: Observer<any> = {
