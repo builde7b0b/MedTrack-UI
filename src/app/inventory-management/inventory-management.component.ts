@@ -3,7 +3,8 @@ import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RoleService } from '../roles/RoleService';
-
+import { MedicationService } from '../medication.service';
+import { Medication } from '../medication.service';
 
 export interface Dessert {
   calories: number;
@@ -39,8 +40,27 @@ export class InventoryManagementComponent {
   sortedData: Dessert[];
 
   
+createMedication() {
+  const newMedication: Medication = {
+    medicationId: null, // Set it to null temporarily
+    name: "aspirin",
+    quantity: 10,
+    expirationDate: new Date("2023-06-01") // Set the desired expiration date
+  };
+  
+  
+  
+  this.medicationService.createMedication(newMedication).subscribe( response => {
+    // handle response,
+    console.log('Medication created successfully:', response);
+  },
+  error => {
+    console.error('Error creating medication:', error);
+  })
+}
 
-  constructor(private roleService: RoleService) {
+
+  constructor(private roleService: RoleService, private medicationService: MedicationService) {
     this.userRole = 'Technician';
     
     // Populating the data

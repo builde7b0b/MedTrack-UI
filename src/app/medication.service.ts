@@ -4,7 +4,7 @@ import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 export interface Medication {
-  medicationId: number;
+  medicationId: any;
   name: string;
   quantity?: number;
   expirationDate: Date;
