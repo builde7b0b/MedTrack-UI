@@ -42,6 +42,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiDocsComponent } from './api-docs/api-docs.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     PharmacistComponent,
     PurchaserComponent,
     ManagerComponent,
+    ApiDocsComponent,
     
     
     
