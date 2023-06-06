@@ -24,6 +24,8 @@ export interface Dessert {
 
 export class InventoryManagementComponent {
 
+  medications: Medication[] = []; // init the medications array
+
   newMedication: Medication = {
     medicationId: null,
     name: '',
