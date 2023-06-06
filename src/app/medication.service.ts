@@ -20,7 +20,7 @@ export class MedicationService {
   constructor(private http: HttpClient) { }
 
   createMedication(medication: Medication): Observable<any> {
-    return this.http.post<any>(`{this.baseUrl}`, medication);
+    return this.http.post(`${this.baseUrl}`, medication);
 
   }
 

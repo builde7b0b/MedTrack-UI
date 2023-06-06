@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { RoleService } from '../roles/RoleService';
 import { MedicationService } from '../medication.service';
 import { Medication } from '../medication.service';
+import { Observer } from 'rxjs';
+
 
 export interface Dessert {
   calories: number;
@@ -43,20 +45,26 @@ export class InventoryManagementComponent {
 createMedication() {
   const newMedication: Medication = {
     medicationId: null, // Set it to null temporarily
-    name: "aspirin",
+    name: "zspirin",
     quantity: 10,
     expirationDate: new Date("2023-06-01") // Set the desired expiration date
   };
   
+  const observer: Observer<any> = {
+    next: (value: any) => {
+      // Handle the next value
+    },
+    error: (error: any) => {
+      // Handle the error
+    },
+    complete: () => {
+      // Handle the completion
+      console.log("SUCCESSFUL")
+    }
+  };
   
-  
-  this.medicationService.createMedication(newMedication).subscribe( response => {
-    // handle response,
-    console.log('Medication created successfully:', response);
-  },
-  error => {
-    console.error('Error creating medication:', error);
-  })
+  this.medicationService.createMedication(newMedication).subscribe(observer)
+  console.log(observer)
 }
 
 
