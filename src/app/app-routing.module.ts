@@ -11,7 +11,7 @@ import { TechnicianComponent } from './technician/technician.component';
 import { PharmacistComponent } from './pharmacist/pharmacist.component';
 import { PurchaserComponent } from './purchaser/purchaser.component';
 import { ManagerComponent } from './manager/manager.component';
-
+import { ApiDocsComponent } from './api-docs/api-docs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'pharmacist', component: PharmacistComponent },
   { path: 'purchaser', component: PurchaserComponent },
   { path: 'manager', component: ManagerComponent },
+  { path: 'api-docs', component: ApiDocsComponent},
 
 ];
 

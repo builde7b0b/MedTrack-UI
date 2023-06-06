@@ -28,6 +28,7 @@ import { Router, RouterModule } from '@angular/router';
 import { RolesComponent } from './roles/roles.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
@@ -39,7 +40,9 @@ import { PurchaserComponent } from './purchaser/purchaser.component';
 import { ManagerComponent } from './manager/manager.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
-
+import {MatDividerModule} from '@angular/material/divider';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiDocsComponent } from './api-docs/api-docs.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,7 @@ import {MatRadioModule} from '@angular/material/radio';
     PharmacistComponent,
     PurchaserComponent,
     ManagerComponent,
+    ApiDocsComponent,
     
     
     
@@ -87,7 +91,10 @@ import {MatRadioModule} from '@angular/material/radio';
    MatProgressSpinnerModule,
    MatTableModule,
   MatRadioModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatBadgeModule,
+  MatDividerModule,
+  HttpClientModule,
     
     
   ],

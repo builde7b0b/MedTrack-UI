@@ -3,6 +3,9 @@ import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { RoleService } from '../roles/RoleService';
+import { MedicationService } from '../medication.service';
+import { Medication } from '../medication.service';
+import { Observer } from 'rxjs';
 
 
 export interface Dessert {
@@ -20,6 +23,15 @@ export interface Dessert {
 })
 
 export class InventoryManagementComponent {
+
+  medications: Medication[] = []; // init the medications array
+
+  newMedication: Medication = {
+    medicationId: null,
+    name: '',
+    quantity: 0,
+    expirationDate: new Date
+  };
 
   userRole: string = '';
 
@@ -39,8 +51,29 @@ export class InventoryManagementComponent {
   sortedData: Dessert[];
 
   
+createMedication() {
+  
+  
+  const observer: Observer<any> = {
+    next: (value: any) => {
+      // Handle the next value
+    },
+    error: (error: any) => {
+      // Handle the error
+    },
+    complete: () => {
+      // Handle the completion
+      console.log("SUCCESSFUL")
+    }
+  };
+  
+  this.medicationService.createMedication(this.newMedication).subscribe(observer)
+  console.log(observer)
+  this.medications.push(this.newMedication)
+}
 
-  constructor(private roleService: RoleService) {
+
+  constructor(private roleService: RoleService, private medicationService: MedicationService) {
     this.userRole = 'Technician';
     
     // Populating the data
@@ -57,7 +90,21 @@ export class InventoryManagementComponent {
       this.userRole = role;
       // Perform any necessary actions based on the userRole
     });
+    this.fetchMedications();
   }
+
+  fetchMedications(): void {
+    this.medicationService.getAllMedications().subscribe(
+      (response: any) => {
+        // Handle the response and assign it to your medication array
+        this.medications = response;
+      },
+      (error: any) => {
+        // Handle the error
+      }
+    );
+  }
+
 
   
 
