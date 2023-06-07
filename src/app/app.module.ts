@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
 import { InventoryManagementComponent } from './inventory-management/inventory-management.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReportsComponent } from './reports/reports.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './Public/home/home.component';
 import { LoginComponent } from './login/login.component';
 import {MatInput, MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,13 +43,14 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiDocsComponent } from './api-docs/api-docs.component';
-import { FooterComponent } from './footer/footer.component';
+import { ApiDocsComponent } from './Public/api-docs/api-docs.component';
+import { FooterComponent } from './Public/footer/footer.component';
 import {
   MatBottomSheet,
   MatBottomSheetModule,
   MatBottomSheetRef,
 } from '@angular/material/bottom-sheet';
+import { HomeCardsComponent } from './home-cards/home-cards.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +68,7 @@ import {
     ManagerComponent,
     ApiDocsComponent,
     FooterComponent,
+    HomeCardsComponent,
     
     
     

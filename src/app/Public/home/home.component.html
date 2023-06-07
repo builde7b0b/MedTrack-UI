@@ -3,7 +3,7 @@
 <mat-toolbar class="custom-toolbar" color="primary">
     <div class="logo-container">
       
-      <img class="img-text" src="../../assets/branded/5.png" height="25px" width="25px" alt="MedTrack Logo" class="logo">MedTrack
+      <img class="img-text" src="../../assets/medTrackLogo.png" height="55px" width="65px" alt="MedTrack Logo" class="logo">
     </div>
     <mat-divider [vertical]="true"></mat-divider>
 
@@ -18,16 +18,16 @@
     
   </mat-toolbar>
   <mat-divider></mat-divider>
-
+<!-- TOOLBAR ENDS - PLACE THIS INTO TOOLBAR COMP -->
  
   
- 
+ <!-- FIRST HOME SECTION -->
   <div class="container">
     <div class="section">
-    <video class="background-video" loop muted autoplay>
-      <source src="assets/pills-5448.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+      <video class="background-video" loop muted autoplay>
+        <source src="assets/pills-5448.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     <div class="content">
       <h1>Welcome to MedTrack</h1>
       <p>Your Pharmacy Inventory Management Solution
@@ -35,8 +35,8 @@
       <p>
         Manage your inventory and streamline your operations.
       </p>
-      <button routerLink="login" mat-raised-button class="custom-button" color="primary">Get Started</button>
-      <button  mat-raised-button (click)="openBottomSheet()" class="custom-button" color="primary">Download PitchDeck</button>
+      <button routerLink="login" mat-raised-button class="custom-button" >Get Started</button>
+      <button  mat-raised-button (click)="openBottomSheet()" class="custom-button" >Download PitchDeck</button>
     </div>
     </div>
   
@@ -62,11 +62,17 @@
         <button mat-button>SHARE</button>
       </mat-card-actions>
     </mat-card> -->
-    
+    <app-home-cards></app-home-cards>
 
   </div>
   </div>
   
+
+  <!-- SECOND HOME SECTION -->
+  <div class="hero">
+    
+
+  </div>
 
  
  <app-footer></app-footer>

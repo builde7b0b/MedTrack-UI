@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent} from './home/home.component';
+import { HomeComponent} from './Public/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MenuComponent } from './menu/menu.component';
@@ -11,7 +11,7 @@ import { TechnicianComponent } from './technician/technician.component';
 import { PharmacistComponent } from './pharmacist/pharmacist.component';
 import { PurchaserComponent } from './purchaser/purchaser.component';
 import { ManagerComponent } from './manager/manager.component';
-import { ApiDocsComponent } from './api-docs/api-docs.component';
+import { ApiDocsComponent } from './Public/api-docs/api-docs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
