@@ -51,6 +51,9 @@ import {
   MatBottomSheetRef,
 } from '@angular/material/bottom-sheet';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
+import { DashboardTabsComponent } from './dashboard-tabs/dashboard-tabs.component';
+import { ManagerTabsComponent } from './manager-tabs/manager-tabs.component';
+import { PharmacistTabsComponent } from './pharmacist-tabs/pharmacist-tabs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,6 +72,9 @@ import { HomeCardsComponent } from './home-cards/home-cards.component';
     ApiDocsComponent,
     FooterComponent,
     HomeCardsComponent,
+    DashboardTabsComponent,
+    ManagerTabsComponent,
+    PharmacistTabsComponent,
     
     
     

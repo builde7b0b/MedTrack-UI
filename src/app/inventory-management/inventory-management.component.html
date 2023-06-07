@@ -29,7 +29,7 @@
       
       <p class="white-text" color="white"></p>
         Options selected: {{shoes.selectedOptions.selected.length}}
-        <button (click)="createMedication()">Create Medication</button>
+        
         <h1>Create Medication</h1>
         <div>
           <mat-form-field>
@@ -56,7 +56,7 @@
 
 
        </mat-tab>
-    <mat-tab label="Alert Settings">
+    <mat-tab label="Returns & Recalls">
         <mat-selection-list #alerts>
         <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">
             {{alerts}}
@@ -67,7 +67,7 @@
           Options selected: {{shoes.selectedOptions.selected.length}}
         </p> 
          </mat-tab>
-    <mat-tab label="Low Stock Inventory"> 
+    <mat-tab label="Transfers & Locations"> 
 
         <table class="transparent-bg" matSort (matSortChange)="sortData($event)">
             <tr>
@@ -90,7 +90,24 @@
   </mat-tab-group>
 </div>
 
-<mat-grid-list cols="2"  rowHeight="1:1">
+<!-- ADD SOME BUTTONS HERE FOR /CREATE/DELETE ETC
+THEN RENDER BASED ON WHICH ONE IS SELECTED. -->
+
+<div *ngIf="userRole === 'Pharmacist'">
+  <app-pharmacist-tabs></app-pharmacist-tabs>
+</div>
+
+
+
+<div *ngIf="userRole === 'Purchaser'">
+  <app-dashboard-tabs></app-dashboard-tabs>
+</div>
+
+<div *ngIf="userRole === 'Manager'">
+  <app-manager-tabs></app-manager-tabs>
+</div>
+
+<!-- <mat-grid-list cols="2"  rowHeight="1:1">
     <mat-grid-tile colspan="1">1</mat-grid-tile>
     <mat-grid-tile>
         
@@ -98,6 +115,6 @@
     </mat-grid-tile>
     
   </mat-grid-list>
-  </div>
+  </div> -->
 
   
