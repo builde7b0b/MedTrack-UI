@@ -15,7 +15,9 @@
   <button mat-raised-button routerLink="/reports" color="Accent">Generate Reports</button>
   <div *ngIf="userRole === 'Technician'">
   <mat-tab-group backgroundColor="primary">
-    <mat-tab label="Inventory"> 
+    <mat-tab  label="Inventory"> 
+
+      <div class="transparent-bg">
       <!-- <mat-selection-list #shoes>
         <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let shoe of typesOfShoes">
           {{shoe}}
@@ -51,6 +53,7 @@
         </div>
 
         <button mat-raised-button color="primary" (click)="createMedication()">Create Medication</button>
+      </div>
 
 
 
