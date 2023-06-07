@@ -1,24 +1,40 @@
-
-<button mat-icon-button routerLink="/"   aria-label="Example icon-button with a menu">
-  <mat-icon>home</mat-icon>
+<mat-toolbar class="custom-toolbar" color="primary">
+  <div class="logo-container">
     
-  </button>
-  <button mat-icon-button [matMenuTriggerFor]="menu"  aria-label="Example icon-button with a menu">
-    <mat-icon>menu</mat-icon>
+    <img class="img-text" src="../../assets/medTrackLogo.png" height="55px" width="65px" alt="MedTrack Logo" class="logo">
+  </div>
+  <mat-divider [vertical]="true"></mat-divider>
+
+  <button mat-icon-button routerLink="/"   aria-label="Example icon-button with a menu">
+    <mat-icon>home</mat-icon>
       
     </button>
-  <mat-menu #menu="matMenu">
-    <button class="router-link" routerLink="/register" mat-menu-item>
+    <button mat-icon-button [matMenuTriggerFor]="menu"  aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
         
-      <span>Register</span>
+      </button>
+    <mat-menu #menu="matMenu">
+      <button class="router-link" routerLink="/register" mat-menu-item>
+          
+        <span>Register</span>
+      </button>
+      <button class="router-link" routerLink="/" mat-menu-item >
+       
+        <span routerLink="/api-docs">API</span>
+      </button>
+      <button class="router-link" routerLink="/" mat-menu-item disabled>
+        
+        <span>Plans</span>
+      </button>
+    </mat-menu>
+  <mat-form-field class="example-form-field">
+    <mat-label>search </mat-label>
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Search" (click)="value=''">
+      <mat-icon>close</mat-icon>
     </button>
-    <button class="router-link" routerLink="/" mat-menu-item >
-     
-      <span routerLink="/api-docs">API</span>
-    </button>
-    <button class="router-link" routerLink="/" mat-menu-item disabled>
-      
-      <span>Plans</span>
-    </button>
-  </mat-menu>
+  </mat-form-field>
+  
+</mat-toolbar>
+
   

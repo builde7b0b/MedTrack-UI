@@ -54,6 +54,10 @@ import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { DashboardTabsComponent } from './dashboard-tabs/dashboard-tabs.component';
 import { ManagerTabsComponent } from './manager-tabs/manager-tabs.component';
 import { PharmacistTabsComponent } from './pharmacist-tabs/pharmacist-tabs.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +85,7 @@ import { PharmacistTabsComponent } from './pharmacist-tabs/pharmacist-tabs.compo
     
   ],
   imports: [
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
@@ -110,7 +115,7 @@ import { PharmacistTabsComponent } from './pharmacist-tabs/pharmacist-tabs.compo
   MatBadgeModule,
   MatDividerModule,
   HttpClientModule,
-  
+
   MatBottomSheetModule,
  
     

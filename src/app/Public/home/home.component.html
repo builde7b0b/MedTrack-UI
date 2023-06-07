@@ -1,23 +1,7 @@
 
 
-<mat-toolbar class="custom-toolbar" color="primary">
-    <div class="logo-container">
-      
-      <img class="img-text" src="../../assets/medTrackLogo.png" height="55px" width="65px" alt="MedTrack Logo" class="logo">
-    </div>
-    <mat-divider [vertical]="true"></mat-divider>
 
-    <app-menu></app-menu>
-    <mat-form-field class="example-form-field">
-      <mat-label>search </mat-label>
-      <input matInput type="text" [(ngModel)]="value">
-      <button *ngIf="value" matSuffix mat-icon-button aria-label="Search" (click)="value=''">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    
-  </mat-toolbar>
-  <mat-divider></mat-divider>
+  <app-menu></app-menu>
 <!-- TOOLBAR ENDS - PLACE THIS INTO TOOLBAR COMP -->
  
   

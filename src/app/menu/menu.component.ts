@@ -10,7 +10,8 @@ import { MedicationService } from '../medication.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  value = '';
+  
   
   
 

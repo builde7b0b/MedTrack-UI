@@ -5,17 +5,23 @@
     <span>Inventory Management</span>
     
   </mat-toolbar>
-  <div class="background-video">
+  <div class="background-video accent-bg">
     <!-- <video autoplay muted loop>
       <source src="assets/pills_.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video> -->
+    <app-roles></app-roles>
+  </div>
   
-  <app-roles></app-roles>
-  <button mat-raised-button routerLink="/reports" color="Accent">Generate Reports</button>
+  
   <div *ngIf="userRole === 'Technician'">
+    <button mat-raised-button class="Custom-b" >New Medication</button>
+    <button mat-raised-button class="Custom-b" >Delete Medication</button>
+    <button mat-raised-button class="Custom-b" >Update Medication</button>
+    
+  
   <mat-tab-group backgroundColor="primary">
-    <mat-tab  label="Inventory"> 
+    <mat-tab label="Inventory"> 
 
       <div class="transparent-bg">
       <!-- <mat-selection-list #shoes>
@@ -23,14 +29,20 @@
           {{shoe}}
         </mat-list-option>
       </mat-selection-list> -->
-      <mat-selection-list #shoes>
+      <mat-selection-list>
         <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let medication of medications">
           {{ medication.name }}
         </mat-list-option>
+       
       </mat-selection-list>
+      <div *ngIf="backendNotRunning" class="error-message">
+        Waiting For Backend To Started Locally...
+        Please Start the Server and Refresh.
+        <mat-spinner></mat-spinner>
+
+      </div>
       
-      <p class="white-text" color="white"></p>
-        Options selected: {{shoes.selectedOptions.selected.length}}
+      
         
         <h1>Create Medication</h1>
         <div>
@@ -60,34 +72,33 @@
 
        </mat-tab>
     <mat-tab label="Returns & Recalls">
+      <table class="transparent-bg white-text" matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th mat-sort-header="name">Medicine (Rx)</th>
+          <th mat-sort-header="calories">Quantity</th>
+          <th mat-sort-header="fat">Exp Date</th>
+          <th mat-sort-header="fat">Supplier</th>
+        </tr>
+      
+        <tr *ngFor="let dessert of sortedData">
+          <td>{{dessert.name}}</td>
+          <td>{{dessert.quantity}}</td>
+          <td>{{dessert.expiration}}</td>
+          <td>{{dessert.supplier}}</td>
+          
+        </tr>
+      </table>
         <mat-selection-list #alerts>
-        <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">
+        <!-- <mat-list-option class="transparent-bg" *ngFor="let alerts of alertSettings">
             {{alerts}}
-          </mat-list-option>
+          </mat-list-option> -->
         </mat-selection-list>
         
-        <p class="white-text">
-          Options selected: {{shoes.selectedOptions.selected.length}}
-        </p> 
+       
          </mat-tab>
     <mat-tab label="Transfers & Locations"> 
 
-        <table class="transparent-bg" matSort (matSortChange)="sortData($event)">
-            <tr>
-              <th mat-sort-header="name">Medicine (Rx)</th>
-              <th mat-sort-header="calories">Quantity</th>
-              <th mat-sort-header="fat">Exp Date</th>
-             
-              
-            </tr>
-          
-            <tr *ngFor="let dessert of sortedData">
-              <td>{{dessert.name}}</td>
-              <td>{{dessert.calories}}</td>
-              <td>{{dessert.fat}}</td>
-              
-            </tr>
-          </table>
+        
         
     </mat-tab>
   </mat-tab-group>
@@ -97,12 +108,17 @@
 THEN RENDER BASED ON WHICH ONE IS SELECTED. -->
 
 <div *ngIf="userRole === 'Pharmacist'">
+  <button mat-raised-button class="Custom-b" routerLink="/reports">Generate Reports</button>
+
   <app-pharmacist-tabs></app-pharmacist-tabs>
 </div>
 
 
 
 <div *ngIf="userRole === 'Purchaser'">
+  <button mat-raised-button class="Custom-b" >Create Order</button>
+    <button mat-raised-button class="Custom-b" >Delete Order</button>
+    <button mat-raised-button class="Custom-b" >Delete Order</button>
   <app-dashboard-tabs></app-dashboard-tabs>
 </div>
 

@@ -6,14 +6,17 @@ import { RoleService } from '../roles/RoleService';
 import { MedicationService } from '../medication.service';
 import { Medication } from '../medication.service';
 import { Observer } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 
-export interface Dessert {
-  calories: number;
-  carbs: number;
-  fat: number;
+export interface Recalls {
   name: string;
-  protein: number;
+  quantity: number;
+  expiration: number;
+  supplier: string;
+  
+  
 }
 
 @Component({
@@ -23,6 +26,7 @@ export interface Dessert {
 })
 
 export class InventoryManagementComponent {
+  backendNotRunning = false;
 
   medications: Medication[] = []; // init the medications array
 
@@ -41,14 +45,14 @@ export class InventoryManagementComponent {
 
   // sortedData: any[] = [];
   
-  desserts: Dessert[] = [
-    {name: 'Frozen yogurt', calories: 159, fat: 6, carbs: 24, protein: 4},
-    {name: 'Ice cream sandwich', calories: 237, fat: 9, carbs: 37, protein: 4},
-    {name: 'Eclair', calories: 262, fat: 16, carbs: 24, protein: 6},
-    {name: 'Cupcake', calories: 305, fat: 4, carbs: 67, protein: 4},
-    {name: 'Gingerbread', calories: 356, fat: 16, carbs: 49, protein: 4},
+  recalls: Recalls[] = [
+    {name: 'Hylenol', quantity: 20, expiration: 10 , supplier: "supplier" },
+    {name: 'Galbuterol', quantity: 20, expiration: 10 , supplier: "supplier"},
+    {name: 'epinim', quantity: 20, expiration: 10 , supplier: "supplier" },
+    {name: 'healfas',quantity: 20, expiration: 10 , supplier: "supplier" },
+    {name: 'healthPill', quantity: 20, expiration: 10 , supplier: "supplier" },
   ];
-  sortedData: Dessert[];
+  sortedData: Recalls[];
 
   
 createMedication() {
@@ -73,17 +77,41 @@ createMedication() {
 }
 
 
-  constructor(private roleService: RoleService, private medicationService: MedicationService) {
+  constructor(private roleService: RoleService, private medicationService: MedicationService, private snackBar: MatSnackBar, private http: HttpClient ) {
     this.userRole = 'Technician';
     
     // Populating the data
     this.sortedData = [
-      { name: 'Chocolate Cake', calories: 300, fat: 12, carbs: 40, protein: 4 },
-      { name: 'Strawberry Cheesecake', calories: 250, fat: 10, carbs: 35, protein: 3 },
-      { name: 'Vanilla Ice Cream', calories: 200, fat: 8, carbs: 30, protein: 2 },
+      { name: 'Chocolate Cake', quantity: 20, expiration: 10 , supplier: "supplier" },
+      { name: 'Strawberry Cheesecake', quantity: 20, expiration: 10 , supplier: "supplier" },
+      { name: 'Vanilla Ice Cream', quantity: 20, expiration: 10 , supplier: "supplier" },
       // Add more dessert objects as needed
     ];
   }
+
+  checkBackendStatus(): void {
+    const backendUrl = 'http://your-backend-url/ping'; // Replace with your backend URL and endpoint
+  
+    this.http.get(backendUrl).subscribe(
+      () => {
+        // Backend is running, do nothing
+      },
+      () => {
+        // Backend is not running, show notification
+        this.showBackendNotRunningNotification();
+      }
+    );
+  }
+  
+
+  showBackendNotRunningNotification(): void {
+    this.snackBar.open('Backend is not running', 'Close', {
+      duration: 5000,
+      panelClass: 'error-notification'
+    });
+  }
+  
+  
 
   ngOnInit() {
     this.roleService.role$.subscribe(role => {
@@ -91,6 +119,7 @@ createMedication() {
       // Perform any necessary actions based on the userRole
     });
     this.fetchMedications();
+    this.userRole = '';
   }
 
   fetchMedications(): void {
@@ -101,6 +130,7 @@ createMedication() {
       },
       (error: any) => {
         // Handle the error
+        this.backendNotRunning = true;
       }
     );
   }
@@ -109,7 +139,7 @@ createMedication() {
   
 
   sortData(sort: Sort) {
-    const data = this.desserts.slice();
+    const data = this.recalls.slice();
     if (!sort.active || sort.direction === '') {
       this.sortedData = data;
       return;
@@ -121,13 +151,12 @@ createMedication() {
         case 'name':
           return compare(a.name, b.name, isAsc);
         case 'calories':
-          return compare(a.calories, b.calories, isAsc);
+          return compare(a.quantity, b.quantity, isAsc);
         case 'fat':
-          return compare(a.fat, b.fat, isAsc);
+          return compare(a.expiration, b.expiration, isAsc);
         case 'carbs':
-          return compare(a.carbs, b.carbs, isAsc);
-        case 'protein':
-          return compare(a.protein, b.protein, isAsc);
+          return compare(a.supplier, b.supplier, isAsc);
+        
         default:
           return 0;
       }
