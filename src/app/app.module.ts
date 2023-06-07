@@ -12,6 +12,7 @@ import {MatIconModule } from '@angular/material/icon'
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule, TooltipComponent} from '@angular/material/tooltip';
+import {MatCardModule} from '@angular/material/card';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -43,7 +44,12 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiDocsComponent } from './api-docs/api-docs.component';
-
+import { FooterComponent } from './footer/footer.component';
+import {
+  MatBottomSheet,
+  MatBottomSheetModule,
+  MatBottomSheetRef,
+} from '@angular/material/bottom-sheet';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +66,7 @@ import { ApiDocsComponent } from './api-docs/api-docs.component';
     PurchaserComponent,
     ManagerComponent,
     ApiDocsComponent,
+    FooterComponent,
     
     
     
@@ -72,7 +79,7 @@ import { ApiDocsComponent } from './api-docs/api-docs.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    
+    MatCardModule,
    MatChipsModule,
     MatIconModule,
     MatStepperModule,
@@ -95,6 +102,9 @@ import { ApiDocsComponent } from './api-docs/api-docs.component';
   MatBadgeModule,
   MatDividerModule,
   HttpClientModule,
+  
+  MatBottomSheetModule,
+ 
     
     
   ],
