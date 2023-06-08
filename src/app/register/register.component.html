@@ -33,7 +33,7 @@ How can we customize our stepper to be a login comp? -->
         <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
                required>
       </mat-form-field>
-      <div>
+      <div class="step-buttons">
         
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -48,7 +48,7 @@ How can we customize our stepper to be a login comp? -->
         <input matInput placeholder="Ex. password123" formControlName="thirdCtrl"
                required>
       </mat-form-field>
-      <div>
+      <div class="step-buttons">
         
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -60,8 +60,8 @@ How can we customize our stepper to be a login comp? -->
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
     <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Go To Login</button>
+    <div class="step-buttons">
+      <button routerLink="/login" mat-button matStepperPrevious>Go To Login</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
