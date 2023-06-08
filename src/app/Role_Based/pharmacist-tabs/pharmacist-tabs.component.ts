@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PharmacistTabsComponent {
   alertSettings: String[] = ["Set Alerts to ASAP", "Set Alerts to 'once per day'", "set alerts to twice per day", "Turn Alerts OFF"];
+  panelOpenState = false;
 
 }

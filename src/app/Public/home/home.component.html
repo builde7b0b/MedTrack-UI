@@ -4,7 +4,6 @@
   <app-menu></app-menu>
 <!-- TOOLBAR ENDS - PLACE THIS INTO TOOLBAR COMP -->
  
-  
  <!-- FIRST HOME SECTION -->
   <div class="container">
     <div class="section">
@@ -12,51 +11,27 @@
         <source src="assets/pills-5448.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-    <div class="content">
-      <h1>Welcome to MedTrack</h1>
-      <p>Your Pharmacy Inventory Management Solution
-      </p>
-      <p>
-        Manage your inventory and streamline your operations.
-      </p>
-      <button routerLink="login" mat-raised-button class="custom-button" >Get Started</button>
-      <button  mat-raised-button (click)="openBottomSheet()" class="custom-button" >Download PitchDeck</button>
-    </div>
-    </div>
-  
-
-
-  <div class="section">
-    <!-- <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
+      <div class="content">
+        <h1>Welcome to MedTrack</h1>
+        <p>Your Pharmacy Inventory Management Solution
         </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card> -->
-    <app-home-cards></app-home-cards>
-
-  </div>
-  </div>
+        <p>
+          Manage your inventory and streamline your operations.
+        </p>
+        <button routerLink="login" mat-raised-button class="custom-button" >Get Started</button>
+        <button  mat-raised-button (click)="openBottomSheet()" class="custom-button" >Download PitchDeck</button>
+      </div>
+    </div>
   
+
+
+    <div class="section">
+    <app-home-cards></app-home-cards>
+    </div>
+  </div>
 
   <!-- SECOND HOME SECTION -->
   <div class="hero">
     
-
   </div>
-
- 
  <app-footer></app-footer>

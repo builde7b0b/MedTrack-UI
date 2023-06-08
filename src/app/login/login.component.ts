@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from '../menu/menu.component';
+import { MenuComponent } from '../Public/menu/menu.component';
 import {FormBuilder, Validators, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';

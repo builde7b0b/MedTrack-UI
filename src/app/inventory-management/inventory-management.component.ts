@@ -2,13 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { RoleService } from '../roles/RoleService';
+import { RoleService } from '../Role_Based/roles/RoleService';
 import { MedicationService } from '../medication.service';
 import { Medication } from '../medication.service';
 import { Observer } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
-
+import {
+  AfterViewInit,
+  
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef,
+  ElementRef,
+} from '@angular/core';
+import {
+  ComponentPortal,
+  DomPortal,
+  Portal,
+  TemplatePortal,
+  PortalModule,
+} from '@angular/cdk/portal';
+import { ManagerTabsComponent } from '../Role_Based/manager-tabs/manager-tabs.component';
 
 export interface Recalls {
   name: string;
@@ -25,8 +40,14 @@ export interface Recalls {
   styleUrls: ['./inventory-management.component.css']
 })
 
-export class InventoryManagementComponent {
+export class InventoryManagementComponent implements AfterViewInit {
+
+  items = ['Location 1', 'Location 2', 'Location 3', 'Location 4', 'Locatoin 5'];
+  expandedIndex = 0;  
   backendNotRunning = false;
+
+  selectedPortal: Portal<any> | undefined;
+  componentPortal: ComponentPortal<ManagerTabsComponent> | undefined;
 
   medications: Medication[] = []; // init the medications array
 
@@ -77,16 +98,21 @@ createMedication() {
 }
 
 
-  constructor(private roleService: RoleService, private medicationService: MedicationService, private snackBar: MatSnackBar, private http: HttpClient ) {
+
+
+  constructor(private roleService: RoleService, private medicationService: MedicationService, private snackBar: MatSnackBar, private http: HttpClient, private _viewContainerRef: ViewContainerRef ) {
     this.userRole = 'Technician';
     
     // Populating the data
     this.sortedData = [
-      { name: 'Chocolate Cake', quantity: 20, expiration: 10 , supplier: "supplier" },
-      { name: 'Strawberry Cheesecake', quantity: 20, expiration: 10 , supplier: "supplier" },
-      { name: 'Vanilla Ice Cream', quantity: 20, expiration: 10 , supplier: "supplier" },
+      { name: 'Hylenol', quantity: 20, expiration: 10 , supplier: "supplier" },
+      { name: 'getBetter', quantity: 20, expiration: 10 , supplier: "supplier" },
+      { name: 'smartRx', quantity: 20, expiration: 10 , supplier: "supplier" },
       // Add more dessert objects as needed
     ];
+  }
+  ngAfterViewInit(): void {
+    this.componentPortal = new ComponentPortal(ManagerTabsComponent);
   }
 
   checkBackendStatus(): void {

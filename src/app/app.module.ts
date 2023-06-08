@@ -26,19 +26,19 @@ import {MatInput, MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { Router, RouterModule } from '@angular/router';
-import { RolesComponent } from './roles/roles.component';
+import { RolesComponent } from './Role_Based/roles/roles.component';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatBadgeModule} from '@angular/material/badge';
 
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {NgFor} from '@angular/common';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './Public/menu/menu.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { TechnicianComponent } from './technician/technician.component';
-import { PharmacistComponent } from './pharmacist/pharmacist.component';
-import { PurchaserComponent } from './purchaser/purchaser.component';
-import { ManagerComponent } from './manager/manager.component';
+import { TechnicianComponent } from './Role_Based/technician/technician.component';
+import { PharmacistComponent } from './Role_Based/pharmacist/pharmacist.component';
+import { PurchaserComponent } from './Role_Based/purchaser/purchaser.component';
+import { ManagerComponent } from './Role_Based/manager/manager.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDividerModule} from '@angular/material/divider';
@@ -52,9 +52,32 @@ import {
 } from '@angular/material/bottom-sheet';
 import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { DashboardTabsComponent } from './dashboard-tabs/dashboard-tabs.component';
-import { ManagerTabsComponent } from './manager-tabs/manager-tabs.component';
-import { PharmacistTabsComponent } from './pharmacist-tabs/pharmacist-tabs.component';
+import { ManagerTabsComponent } from './Role_Based/manager-tabs/manager-tabs.component';
+import { PharmacistTabsComponent } from './Role_Based/pharmacist-tabs/pharmacist-tabs.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
+import {
+  AfterViewInit,
+  Component,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef,
+  ElementRef,
+} from '@angular/core';
+import {
+  ComponentPortal,
+  DomPortal,
+  Portal,
+  TemplatePortal,
+  PortalModule,
+} from '@angular/cdk/portal';
+import {CdkAccordionModule} from '@angular/cdk/accordion';
+import { TransfersGridListComponent } from './transfers-grid-list/transfers-grid-list.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
+
+
 
 
 
@@ -72,13 +95,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     TechnicianComponent,
     PharmacistComponent,
     PurchaserComponent,
-    ManagerComponent,
+    
     ApiDocsComponent,
     FooterComponent,
     HomeCardsComponent,
     DashboardTabsComponent,
     ManagerTabsComponent,
     PharmacistTabsComponent,
+    TransfersGridListComponent,
     
     
     
@@ -117,6 +141,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   HttpClientModule,
 
   MatBottomSheetModule,
+  CdkAccordionModule,
+  MatExpansionModule,
  
     
     

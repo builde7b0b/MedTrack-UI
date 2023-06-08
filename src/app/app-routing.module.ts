@@ -3,14 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent} from './Public/home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { MenuComponent } from './menu/menu.component';
-import { RolesComponent } from './roles/roles.component';
+import { MenuComponent } from './Public/menu/menu.component';
+import { RolesComponent } from './Role_Based/roles/roles.component';
 import { ReportsComponent } from './reports/reports.component';
 import { InventoryManagementComponent } from './inventory-management/inventory-management.component';
-import { TechnicianComponent } from './technician/technician.component';
-import { PharmacistComponent } from './pharmacist/pharmacist.component';
-import { PurchaserComponent } from './purchaser/purchaser.component';
-import { ManagerComponent } from './manager/manager.component';
+import { TechnicianComponent } from './Role_Based/technician/technician.component';
+import { PharmacistComponent } from './Role_Based/pharmacist/pharmacist.component';
+import { PurchaserComponent } from './Role_Based/purchaser/purchaser.component';
+import { ManagerComponent } from './Role_Based/manager/manager.component';
 import { ApiDocsComponent } from './Public/api-docs/api-docs.component';
 
 const routes: Routes = [
