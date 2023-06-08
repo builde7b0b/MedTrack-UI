@@ -74,7 +74,8 @@ import {
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { TransfersGridListComponent } from './transfers-grid-list/transfers-grid-list.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { OrderListComponent } from './order-list/order-list.component';
 
 
 
@@ -103,6 +104,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ManagerTabsComponent,
     PharmacistTabsComponent,
     TransfersGridListComponent,
+    OrderListComponent,
     
     
     
@@ -143,6 +145,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
   MatBottomSheetModule,
   CdkAccordionModule,
   MatExpansionModule,
+  MatPaginatorModule,
  
     
     
