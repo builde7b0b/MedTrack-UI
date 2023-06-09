@@ -1,17 +1,22 @@
 
   
 <app-menu></app-menu>
-<mat-toolbar color="primary">
+<div class="custom">
+  <mat-toolbar>
     <span>Inventory Management</span>
     
-  </mat-toolbar>
-  <div class="background-video accent-bg">
-    <!-- <video autoplay muted loop>
+</mat-toolbar>
+</div>
+
+
+
+  <div class="centered-container">
+    <video class="background-video" loop muted autoplay>
       <source src="assets/pills_.mp4" type="video/mp4">
       Your browser does not support the video tag.
-    </video> -->
+    </video>
     <app-roles></app-roles>
-  </div>
+  
   
   
   <div *ngIf="userRole === 'Technician'">
@@ -75,9 +80,7 @@
           </div>
         
         </mat-grid-tile>
-        <mat-grid-tile></mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
+      
       </mat-grid-list>
     
        </mat-tab>
@@ -178,5 +181,6 @@ THEN RENDER BASED ON WHICH ONE IS SELECTED. -->
     
   </mat-grid-list>
   </div> -->
+  </div>
 
   

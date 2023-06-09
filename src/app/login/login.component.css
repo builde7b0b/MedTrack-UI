@@ -6,10 +6,11 @@
   height: calc(100vh - 100px); /* Subtract the height of the header and footer */
 }
 
-  h1{
-    color: black;
-    
-  }
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
   .background-video {
     position: absolute;

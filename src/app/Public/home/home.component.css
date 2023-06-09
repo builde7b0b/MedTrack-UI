@@ -25,7 +25,7 @@
    padding: 10px;
    position: relative;
    height: 50%;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
    margin-top: 10px;
 
   }
@@ -44,10 +44,11 @@
   .content {
     text-align: center;
     color: rgb(0, 0, 0);
+    background-color:#00a79d;
   
    
     width: 100%;
-    height: 100vh;
+    height: 100%;
     
   }
 
@@ -67,6 +68,8 @@
   p {
     font-size: 1.5rem;
     color: white;
+    font-style: bold;
+    
    
   }
   
@@ -74,12 +77,12 @@
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 30px;
-    background-color: #4eec0a;
-    border: 2px solid #6ab04c;
+    background-color: white;
+    border: 2px solid #004d7a ;
    
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     width: 50%;
-    height: 10%;
+    height: 18%;
   }
   
   .custom-button:hover {
@@ -102,11 +105,4 @@
  
   
 
-  .hero {
-    background-color:#6ab04c;
-    display:grid;
-    width: 100%;
-    height: 200px;
-
-    
-  }
+ 

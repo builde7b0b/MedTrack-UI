@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Medication } from '../../medication.service';
 
 @Component({
   selector: 'app-manager-tabs',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./manager-tabs.component.css']
 })
 export class ManagerTabsComponent {
+
+
+  backendNotRunning = false;
+
+  medications: Medication[] = []; // init the medications array
+
 
 }

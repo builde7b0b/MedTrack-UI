@@ -1,27 +1,27 @@
-<mat-tab-group backgroundColor="accent">
+<mat-tab-group backgroundColor="warn">
     <mat-tab label="Inventory"> 
-      
-      
-      
-         
+      <mat-selection-list>
+        <mat-list-option class="white-text transparent-bg" color="accent" *ngFor="let medication of medications">
+          {{ medication.name }}
+        </mat-list-option>
        
+      </mat-selection-list>
+      <div *ngIf="backendNotRunning" class="error-message">
+        Waiting For Backend To Started Locally...
+        Please Start the Server and Refresh.
+        <mat-spinner></mat-spinner>
 
-
-
-
+      </div>
+      
        </mat-tab>
-    <mat-tab label="Alert Settings">
+    <mat-tab label="Orders">
         <mat-selection-list #alerts>
        
         </mat-selection-list>
         
         
          </mat-tab>
-    <mat-tab label="Low Stock Inventory"> 
+    <mat-tab disabled label="Reports"> 
 
-        
-          
-           
-        
     </mat-tab>
   </mat-tab-group>
