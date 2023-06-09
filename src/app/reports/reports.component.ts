@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuComponent } from '../Public/menu/menu.component';
 
 export interface PeriodicElement {
   name: string;
